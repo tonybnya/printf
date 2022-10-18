@@ -2,7 +2,7 @@
 
 This is the First Team Project for the ALX Software Engineering Program.
 
-My partner is <span style="color: green">Soso Oloju</span>, and we builded our own version of `printf()` function in C programming language.
+My partner is <span style="color: green">Tony B. Nya</span>, and we builded our own version of `printf()` function in C programming language.
 
 ---
 
