@@ -28,8 +28,7 @@ int print(const char *format, va_list args)
 			if (*format == '%')
 				mode = 1;
 			else
-				/* _putchar(*format); */
-				write(1, &format, 1);
+				 _putchar(*format);
 		}
 		else if (mode == 1)
 		{
@@ -39,7 +38,7 @@ int print(const char *format, va_list args)
 				{
 					char ch = va_arg(args, int);
 
-					/* result = _putchar(ch); */
+				/* result = _putchar(ch); */
 					result = write(1, &ch, 1);
 					break;
 				}
