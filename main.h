@@ -10,7 +10,7 @@
 #include <string.h>
 #include <unistd.h>
 
-int _printf(const char *format, ...);
+int _write(char c);
 int print(const char *format, va_list args);
 int _putchar(char c);
 void unsigned_num2str(uint64_t num, int base, char *buffer);
