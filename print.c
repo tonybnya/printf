@@ -28,7 +28,7 @@ int print(const char *format, va_list args)
 			if (*format == '%')
 				mode = 1;
 			else
-				 _putchar(*format);
+				_putchar(*format);
 		}
 		else if (mode == 1)
 		{
@@ -38,8 +38,7 @@ int print(const char *format, va_list args)
 				{
 					char ch = va_arg(args, int);
 
-				/* result = _putchar(ch); */
-					result = write(1, &ch, 1);
+					result = _putchar(ch);
 					break;
 				}
 
@@ -49,9 +48,7 @@ int print(const char *format, va_list args)
 
 					while (*str)
 					{
-						/* result = _putchar(*str++); */
-						result = write(1, &str, 1);
-						str++;
+						result = _putchar(*str++);
 					}
 					break;
 				}
@@ -74,8 +71,7 @@ int print(const char *format, va_list args)
 
 					for (i = 0; num_buf[i]; i++)
 					{
-						/* result += _putchar(num_buf[i]); */
-						result += write(1, &num_buf[i], 1);
+						result += _putchar(num_buf[i]);
 					}
 					break;
 				}
@@ -97,8 +93,7 @@ int print(const char *format, va_list args)
 
 					for (i = 0; num_buf[i]; i++)
 					{
-						/* result += _putchar(num_buf[i]); */
-						result += write(1, &num_buf[i], 1);
+						result += _putchar(num_buf[i]);
 					}
 					break;
 				}
@@ -126,8 +121,7 @@ int print(const char *format, va_list args)
 					unsigned_num2str(num, 16, num_buf);
 
 					for (i = 0; num_buf[i]; i++)
-						/* result += _putchar(num_buf[i]); */
-						result += write(1, &num_buf[i], 1);
+						result += _putchar(num_buf[i]);
 					break;
 				}
 
@@ -151,13 +145,11 @@ int print(const char *format, va_list args)
 						if (isalpha(num_buf[i]))
 						{
 							char c = toupper(num_buf[i]);
-							/* result += _putchar(c); */
-							result += write(1, &c, 1);
+							result += _putchar(c);
 						}
 						else
 						{
-							/* result += _putchar(num_buf[i]); */
-							result += write(1, &num_buf[i], 1);
+							result += _putchar(num_buf[i]);
 						}
 					}
 					break;
@@ -172,8 +164,7 @@ int print(const char *format, va_list args)
 					unsigned_num2str((uint64_t) ptr_num, 16, num_buf);
 
 					for (i = 0; num_buf[i]; i++)
-						/* result += _putchar(num_buf[i]); */
-						result += write(1, &num_buf[i], 1);
+						result += _putchar(num_buf[i]);
 					break;
 				}
 
@@ -189,9 +180,7 @@ int print(const char *format, va_list args)
 
 				case '%':
 				{
-					/* result += _putchar('%'); */
-					char c = '%';
-					result += write(1, &c, 1);
+					result += _putchar('%');
 				}
 			}
 
