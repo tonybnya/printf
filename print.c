@@ -168,6 +168,16 @@ int print(const char *format, va_list args)
 					break;
 				}
 
+				case 'f':
+				{
+					break;
+				}
+
+				case 'o':
+				{
+					break;
+				}
+
 				case '%':
 				{
 					result += _putchar('%');
