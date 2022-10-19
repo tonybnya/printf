@@ -5,10 +5,6 @@
  * @format: string representing the format of arguments
  * @args: variadic arguments
  *
- * mode:
- * 0 - simple printing
- * 1 - escape printing
- *
  * Return: void
  */
 int print(const char *format, va_list args)
