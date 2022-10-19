@@ -19,7 +19,7 @@ int print(const char *format, va_list args)
 			if (*format == '%')
 				mode = 1;
 			else
-				write(*format);
+				_putchar(*format);
 		}
 		else if (mode == 1)
 		{
@@ -29,7 +29,7 @@ int print(const char *format, va_list args)
 				{
 					char ch = va_arg(args, int);
 
-					result = write(ch);
+					result = _putchar(ch);
 					break;
 				}
 
@@ -39,14 +39,14 @@ int print(const char *format, va_list args)
 
 					while (*str)
 					{
-						result = write(*str++);
+						result = _putchar(*str++);
 					}
 					break;
 				}
 
 				case '%':
 				{
-					result += write('%');
+					result += _putchar('%');
 				}
 			}
 		}
