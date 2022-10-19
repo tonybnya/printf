@@ -1,6 +1,8 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+#define BUFSIZE 1024
+
 #include <ctype.h>
 #include <limits.h>
 #include <stdarg.h>
@@ -10,10 +12,21 @@
 #include <string.h>
 #include <unistd.h>
 
-int _write(char c);
+/**
+ * struct printer - structure for printing various types
+ * @symbol: type to print
+ * @func_t: function to print
+ */
+typedef struct printer
+{
+	const char symbol;
+	int (*func_t)(va_list);
+} printer_t;
+
 int print(const char *format, va_list args);
-int _putchar(char c);
-void unsigned_num2str(uint64_t num, int base, char *buffer);
-void num2str(int64_t num, int base, char *buffer);
+int _write(char c);
+int print_char(va_list arg_list)
+int print_string(va_list arg_list)
+int print_percent(__attribute__((unused))va_list arguments)
 
 #endif /* MAIN_H */
