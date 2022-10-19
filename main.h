@@ -25,8 +25,9 @@ typedef struct printer
 
 int print(const char *format, va_list args);
 int _write(char c);
-int print_char(va_list arg_list)
-int print_string(va_list arg_list)
-int print_percent(__attribute__((unused))va_list arguments)
+int print_char(va_list arg_list);
+int print_string(va_list arg_list);
+int print_percent(__attribute__((unused))va_list arguments);
+int (*flags(const char c))(va_list);
 
 #endif /* MAIN_H */
