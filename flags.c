@@ -1,10 +1,8 @@
 #include "main.h"
 
 /**
- * flags − function to find a function pointer
- * associated with specifier
- *
- * @a: specifier to find the correct function
+ * flags - finds a function pointer associated with specifier
+ * @ch: specifier to find the correct function
  *
  * Return: function pointer
  */
@@ -18,7 +16,6 @@ int (*flags(const char ch))(va_list)
 		{'%', print_percent},
 		{'d', print_decimal},
 		{'i', print_integer},
-		{'b', print_binary},
 		{'\0', NULL}
 	};
 

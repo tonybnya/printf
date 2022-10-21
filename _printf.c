@@ -1,10 +1,11 @@
 #include "main.h"
 
 /**
- * _printf − Soso & Tony version of printf
- * @format: types of the argument
+ * _printf - printf anything
+ * @format: type of the argument
+ * @...: variadic list of arguments
  *
- * Return: number of characters printed
+ * Return: number if characters printed
  */
 int _printf(const char *format, ...)
 {
@@ -43,6 +44,5 @@ int _printf(const char *format, ...)
 		}
 	}
 	va_end(args);
-	
 	return (result);
 }

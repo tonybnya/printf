@@ -26,7 +26,6 @@ int print_str(va_list args);
 int print_percent(__attribute__((unused))va_list args);
 int print_decimal(va_list args);
 int print_integer(va_list args);
-int print_binary(va_list, args);
 int (*flags(const char s))(va_list);
 
 #endif /* MAIN_H */

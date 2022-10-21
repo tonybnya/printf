@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * print_char − prints a character (specifier −> %c)
+ * print_char - prints a character
  * @args: variadic arguments
  *
- * Return: num of the character printed
+ * Return: num of the characters printed
  */
 int print_char(va_list args)
 {
@@ -14,8 +14,8 @@ int print_char(va_list args)
 }
 
 /**
- * print_str − prints string of characters (specifier −> %s)
- * @arg_list: variadic arguments
+ * print_str -prints string of characters
+ * @args: variadic arguments
  *
  * Return: num of parameters printed
  */
@@ -35,7 +35,7 @@ int print_str(va_list args)
 }
 
 /**
- * print_percent − prints the character % (specifier −> %%)
+ * print_percent - prints the character %
  * @args: unused
  *
  * Return: Always 1
@@ -50,7 +50,7 @@ int print_percent(__attribute__((unused))va_list args)
 }
 
 /**
- * print_decimal − prints a decimal (specifier −> %d)
+ * print_decimal - prints a decimal
  * @args: decimal to print
  *
  * Return: number of characters and digits printed
@@ -95,10 +95,10 @@ int print_decimal(va_list args)
 }
 
 /**
- * print_integer − prints an integer (specifier −> %i)
+ * print_integer - prints an integer
  * @args: integer to print
  *
- * Return: number of chars and digits printed
+ * Return: number of characters and digits printed
  */
 int print_integer(va_list args)
 {
@@ -138,13 +138,3 @@ int print_integer(va_list args)
 
 	return (i);
 }
-
-/**                                                  
- * print_binary - print a binary version of an integer
- * @args: variadic arguments                         
- *                                                   
- * Return: a binary                                  
- */
-int print_binary(va_list args)
-{
-	int num = va_arg(args, int);

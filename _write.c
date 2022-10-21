@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * _write − write a character c to the standard output
+ * _write - writes a character c stdout
  * @c: A character
  *
- * Return: 1 on success, −1 on error
+ * Return: 1 on success, -1 on error
  */
 int _write(char c)
 {
