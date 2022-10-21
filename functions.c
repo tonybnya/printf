@@ -138,3 +138,13 @@ int print_integer(va_list args)
 
 	return (i);
 }
+
+/**                                                  
+ * print_binary - print a binary version of an integer
+ * @args: variadic arguments                         
+ *                                                   
+ * Return: a binary                                  
+ */
+int print_binary(va_list args)
+{
+	int num = va_arg(args, int);

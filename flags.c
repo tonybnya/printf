@@ -18,6 +18,7 @@ int (*flags(const char ch))(va_list)
 		{'%', print_percent},
 		{'d', print_decimal},
 		{'i', print_integer},
+		{'b', print_binary},
 		{'\0', NULL}
 	};
 
