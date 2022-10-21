@@ -13,7 +13,6 @@
  * @symbol: type to print
  * @func_t: function to print
  */
-
 typedef struct printer
 {
 	const char symbol;
